@@ -22,12 +22,12 @@ namespace SistemaInventario.AccesoDatos.Repositorio
             var bodegaBD = _db.Bodegas.FirstOrDefault(b => b.Id == bodega.Id);
             if (bodegaBD != null)
             {
-                bodega.Nombre= bodegaBD.Nombre;
-                bodega.Descripcion = bodegaBD.Descripcion;
-                bodega.Estado = bodegaBD.Estado;
+                bodegaBD.Nombre= bodega.Nombre;
+                bodegaBD.Descripcion = bodega.Descripcion;
+                bodegaBD.Estado = bodega.Estado;
                 _db.SaveChanges();
             }
-        }      
+        }       
         
     }
 }
